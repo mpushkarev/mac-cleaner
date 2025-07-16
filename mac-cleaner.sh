@@ -6,9 +6,13 @@ YELLOW='\033[0;33m'
 BLUE='\033[0;34m'
 NC='\033[0m'
 
+echo -e "[${YELLOW}RUN${NC}] Working..."
+
 FREE_BEFORE=$(df -k ~ | tail -1 | awk '{print $4}')
+
 rm -rf ~/Library/Caches/*
 rm -rf ~/.Trash/*
+
 FREE_AFTER=$(df -k ~ | tail -1 | awk '{print $4}')
 
 FREED_KIB=$(($FREE_AFTER - $FREE_BEFORE))
