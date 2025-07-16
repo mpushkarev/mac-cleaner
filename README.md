@@ -1,3 +1,4 @@
+lang: **en** | [ru](README.ru.md)
 # 🧹 mac-cleaner
 
 Minimal macOS clutter cleanup tool — removes caches and trash.
