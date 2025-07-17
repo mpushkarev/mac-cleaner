@@ -6,7 +6,7 @@ YELLOW='\033[0;33m'
 BLUE='\033[0;34m'
 NC='\033[0m'
 
-if grep -q free-my-mac ~/.zshrc; then
+if [ -f "~/.zshrc" ] && grep -q free-my-mac ~/.zshrc; then
     echo -e "[${RED}ERR${NC}] Alias already exists in ~/.zshrc"
 else
     echo "alias free-my-mac='$(pwd)/mac-cleaner.sh'" >> ~/.zshrc

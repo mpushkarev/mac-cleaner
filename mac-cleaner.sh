@@ -10,8 +10,8 @@ echo -e "[${YELLOW}RUN${NC}] Working..."
 
 FREE_BEFORE=$(df -k ~ | tail -1 | awk '{print $4}')
 
-rm -rf ~/Library/Caches/*
-rm -rf ~/.Trash/*
+rm -rf ~/Library/Caches/* 2>/dev/null
+rm -rf ~/.Trash/* 2>/dev/null
 
 FREE_AFTER=$(df -k ~ | tail -1 | awk '{print $4}')
 
