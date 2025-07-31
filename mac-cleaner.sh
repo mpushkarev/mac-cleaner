@@ -6,6 +6,11 @@ YELLOW='\033[0;33m'
 BLUE='\033[0;34m'
 NC='\033[0m'
 
+if [[ "$OSTYPE" != "darwin"* ]]; then
+    echo -e "[${RED}ERR${NC}] Looks like you're not on macOS. Nice try :)"
+    exit 1
+fi
+
 PURGE=false
 
 while [[ $# -gt 0 ]]; do
